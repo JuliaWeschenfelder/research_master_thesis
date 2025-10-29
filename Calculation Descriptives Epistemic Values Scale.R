@@ -5,8 +5,11 @@ library(tidyr)
 library(knitr)
 library(kableExtra)
 
+# base path for data
+data_path <- "data_epistemic_values_scale.xlsx"
+
 # Load data
-dat <- read_excel("C:/Users/julia/Desktop/GitHub Upload/data_epistemic_values_scale.xlsx")
+dat <- readxl::read_excel(data_path)
 
 # Identify item columns
 item_cols <- grep("^Item\\d+", names(dat), value = TRUE)
@@ -123,4 +126,5 @@ print(
 # Save CSVs
 write.csv(item_table, "epistemic_item_summary.csv", row.names = FALSE)
 write.csv(subscale_table, "epistemic_subscale_summary.csv", row.names = FALSE)
+
 
