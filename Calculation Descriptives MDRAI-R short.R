@@ -3,8 +3,11 @@ library(readxl)
 library(dplyr)
 library(tidyr)
 
+# base path for data
+data_path <- "data_MDRAI-R_short.xlsx"
+
 # Load data
-dat <- read_excel("C:/Users/julia/Desktop/data_scales.xlsx")
+dat <- readxl::read_excel(data_path)
 
 # Identify item columns
 item_cols <- grep("^Item\\d+", names(dat), value = TRUE)
@@ -117,3 +120,4 @@ print(
 
 write.csv(item_table, "item_summary.csv", row.names = FALSE)
 write.csv(subscale_table, "subscale_summary.csv", row.names = FALSE)
+
