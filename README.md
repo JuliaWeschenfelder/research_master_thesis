@@ -1,4 +1,4 @@
-# Research_master_thesis
+# Research Master Thesis
 
 This repository contains the R scripts and research materials for the study
 **Choosing What to Study: Researchers' Motivations, Epistemic Values, and Reflections on Research Practice**.
